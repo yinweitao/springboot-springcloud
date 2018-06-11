@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.csdn</groupId>
+	<artifactId>passport</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>passport</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+	</parent>
+
+	<!-- 统一配置构件的版本号 -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<passprot.version>0.0.1-SNAPSHOT</passprot.version>
+		<eureka.version>1.4.0.RELEASE</eureka.version>
+		<druid.version>1.1.9</druid.version>
+		<pagehelper-spring-boot-starter.version>1.2.3</pagehelper-spring-boot-starter.version>
+		<mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
+		<spring-cloud.version>1.4.0.RELEASE</spring-cloud.version>
+	</properties>
+
+	<!-- 子模块 -->
+	<modules>
+
+		<module>passport-service</module>
+		<module>passport-api</module>
+		<module>passport-zuul</module>
+		<module>passport-eureka</module>
+	</modules>
+
+	<!-- 依赖管理 -->
+	<dependencyManagement>
+		<dependencies>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- 远程部署管理信息 -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://maven.csdn.net:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>
